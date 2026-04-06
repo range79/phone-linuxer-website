@@ -1,14 +1,6 @@
 import type { CSSProperties } from "react";
 import { BrandLogo } from "./BrandLogo";
 
-const linkStyle: CSSProperties = {
-  color: "var(--text-muted)",
-  fontWeight: 500,
-  fontSize: "0.95rem",
-  textDecoration: "none",
-  transition: "color 0.2s",
-};
-
 export function Navbar() {
   return (
     <header
@@ -22,72 +14,73 @@ export function Navbar() {
         borderBottom: "1px solid rgba(103, 80, 164, 0.15)",
       }}
     >
-      <nav
+      <div
         style={{
           maxWidth: 1120,
           margin: "0 auto",
           padding: "0.85rem 1.5rem",
           display: "flex",
-          alignItems: "center",
           justifyContent: "space-between",
+          alignItems: "center",
           gap: "1rem",
+          flexWrap: "wrap",
         }}
       >
         <a
           href="#download"
           style={{
-            fontWeight: 700,
-            fontSize: "1.1rem",
+            fontSize: "1.05rem",
             letterSpacing: "-0.02em",
             color: "var(--text)",
             textDecoration: "none",
             display: "flex",
             alignItems: "center",
-            gap: "0.65rem",
+            gap: "0.5rem",
+            fontWeight: 800,
           }}
         >
           <BrandLogo
             size="sm"
             style={{ filter: "drop-shadow(0 0 10px rgba(103, 80, 164, 0.45))" }}
           />
-          RangeEmulator
+          <span style={{ display: "inline-block" }}>RangeEmulator</span>
         </a>
-        <div style={{ display: "flex", gap: "clamp(0.75rem, 2vw, 1.25rem)", flexWrap: "wrap", alignItems: "center", justifyContent: "flex-end" }}>
+        <div 
+          style={{ 
+            display: "flex", 
+            gap: "0.75rem", 
+            alignItems: "center", 
+            justifyContent: "flex-end",
+            overflowX: "auto",
+            WebkitOverflowScrolling: "touch",
+            padding: "4px 0",
+            maxWidth: "100%",
+          }}
+        >
           {[
             ["Download", "#download"],
             ["Telemetry", "#performance"],
             ["Management", "#vms"],
-            ["Titan", "#titan"],
-            ["Hardware", "#hardware"],
-            ["Connect", "#spice"],
           ].map(([label, href]) => (
             <a
-              key={href}
+              key={label}
               href={href}
-              style={linkStyle}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.color = "var(--success)";
+              style={{
+                fontSize: "0.825rem",
+                fontWeight: 700,
+                color: "var(--on-surface-variant)",
+                textDecoration: "none",
+                transition: "color 0.2s",
+                whiteSpace: "nowrap",
               }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.color = "var(--text-muted)";
-              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--success)")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "var(--on-surface-variant)")}
             >
               {label}
             </a>
           ))}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "6px",
-              padding: "4px 10px",
-              background: "rgba(76, 175, 80, 0.1)",
-              borderRadius: "12px",
-              border: "1px solid rgba(76, 175, 80, 0.2)",
-              marginLeft: "8px",
-            }}
-          >
-            <span
+          <div style={{ display: "flex", alignItems: "center", gap: "6px", marginLeft: "4px", flexShrink: 0 }}>
+             <span
               style={{
                 width: 6,
                 height: 6,
@@ -96,10 +89,10 @@ export function Navbar() {
                 boxShadow: "0 0 8px var(--success-glow)",
               }}
             />
-            <span style={{ fontSize: "0.7rem", color: "var(--success)", fontWeight: 800, fontFamily: "var(--font-mono)" }}>ONLINE</span>
+            <span style={{ fontSize: "0.7rem", fontWeight: 900, color: "var(--success)", letterSpacing: "0.05em" }}>ONLINE</span>
           </div>
         </div>
-      </nav>
+      </div>
     </header>
   );
 }

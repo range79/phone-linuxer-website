@@ -47,18 +47,20 @@ export function Hero() {
         <div style={{ marginBottom: "2rem" }}>
           <BrandLogo size="hero" style={{ margin: "0 auto 1.5rem" }} />
           <h1
+            className="h1-hero"
             style={{
-              fontSize: "clamp(2rem, 8vw, 3.25rem)",
+              fontSize: "clamp(2.25rem, 10vw, 3.5rem)",
               fontWeight: 800,
               color: "var(--brand-bright)",
               marginBottom: "0.5rem",
+              lineHeight: 1.1,
             }}
           >
             RangeEmulator
           </h1>
           <p
             style={{
-              fontSize: "1.125rem",
+              fontSize: "clamp(1rem, 4vw, 1.25rem)",
               color: "var(--on-surface-variant)",
               fontWeight: 500,
             }}
@@ -70,13 +72,14 @@ export function Hero() {
 
       <ScrollReveal delayMs={150}>
         <div
+          className="grid-mobile-stack"
           style={{
             display: "flex",
-            flexDirection: "column",
+            flexDirection: "row",
             alignItems: "center",
             gap: "1.25rem",
             width: "100%",
-            maxWidth: 420,
+            maxWidth: 480,
           }}
         >
           <a

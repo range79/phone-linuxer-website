@@ -92,6 +92,7 @@ export function MaxPerformanceSection() {
       </ScrollReveal>
 
       <div
+        className="grid-mobile-1"
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
@@ -108,6 +109,8 @@ export function MaxPerformanceSection() {
                 justifyContent: "space-between",
                 alignItems: "flex-start",
                 marginBottom: "24px",
+                flexWrap: "wrap",
+                gap: "1rem",
               }}
             >
               <div>
@@ -173,7 +176,10 @@ export function MaxPerformanceSection() {
             </div>
 
             {/* Thermal Gauges Row */}
-            <div style={{ display: "flex", gap: "12px", marginBottom: "20px" }}>
+            <div 
+              className="grid-mobile-stack"
+              style={{ display: "flex", gap: "12px", marginBottom: "20px" }}
+            >
               <div
                 style={{
                   flex: 1,

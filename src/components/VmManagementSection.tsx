@@ -168,6 +168,7 @@ export function VmManagementSection() {
       </ScrollReveal>
 
       <div
+        className="grid-mobile-1"
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",

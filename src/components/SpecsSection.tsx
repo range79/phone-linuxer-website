@@ -36,10 +36,11 @@ export function SpecsSection() {
              Technical Specifications
           </h2>
           
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+          <div 
+            className="grid-mobile-1"
+            style={{ 
+              display: "grid", 
+              gridTemplateColumns: "repeat(4, 1fr)", 
               gap: "2rem",
             }}
           >

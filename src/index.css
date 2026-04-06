@@ -227,3 +227,53 @@ a {
 .btn-support:hover svg {
   animation: heart-pulse 0.8s ease-in-out infinite;
 }
+
+/* --- MOBILE RESPONSIVENESS OVERHAUL --- */
+
+@media (max-width: 768px) {
+  :root {
+    --section-px: 1rem;
+  }
+
+  section {
+    padding: 3rem var(--section-px) !important;
+  }
+
+  .btn-cta, .btn-cta-secondary {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    height: 56px;
+  }
+
+  .glass-card-cockpit {
+    padding: 1.5rem !important;
+    border-radius: 20px;
+  }
+
+  .h1-hero {
+    font-size: clamp(2rem, 10vw, 2.75rem) !important;
+  }
+
+  /* Grid Reset for Mobile */
+  .grid-mobile-1 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .grid-mobile-stack {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-chip {
+    padding: 3px 8px;
+    font-size: 0.7rem;
+  }
+  
+  .status-badge {
+    padding: 4px 6px;
+    font-size: 0.5rem;
+  }
+}
