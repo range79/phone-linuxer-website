@@ -59,7 +59,6 @@ export function MaxPerformanceSection() {
       id="performance"
       style={{
         position: "relative",
-        zIndex: 1,
         padding: "4rem 1.5rem",
         maxWidth: 1120,
         margin: "0 auto",

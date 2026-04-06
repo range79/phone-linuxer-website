@@ -23,7 +23,6 @@ export function Hero() {
       id="download"
       style={{
         position: "relative",
-        zIndex: 1,
         padding: "clamp(3rem, 12vw, 8rem) 1.5rem 6rem",
         maxWidth: 1120,
         margin: "0 auto",
