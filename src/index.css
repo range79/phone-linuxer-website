@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
 :root {
   /* Material 3 App Mirror (Obsidian #000000 + SurfaceVariant) */
   --bg-deep: #000000;
@@ -18,7 +20,7 @@
   /* App Error Red (#ef4444) */
   --error: #ef4444;
   --error-alpha: rgba(239, 68, 68, 0.12);
-  --font-sans: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", "Inter", -apple-system, system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 }
 

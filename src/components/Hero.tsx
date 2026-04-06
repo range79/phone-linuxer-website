@@ -71,14 +71,13 @@ export function Hero() {
 
       <ScrollReveal delayMs={150}>
         <div
-          className="grid-mobile-stack"
           style={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: "column",
             alignItems: "center",
             gap: "1.25rem",
             width: "100%",
-            maxWidth: 480,
+            maxWidth: 420,
           }}
         >
           <a
