@@ -1,4 +1,3 @@
-import type { CSSProperties } from "react";
 import { BrandLogo } from "./BrandLogo";
 
 export function Navbar() {
