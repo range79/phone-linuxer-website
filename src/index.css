@@ -1,0 +1,229 @@
+:root {
+  /* Material 3 App Mirror (Obsidian #000000 + SurfaceVariant) */
+  --bg-deep: #000000;
+  --surface: #121212;
+  --surface-variant: rgba(28, 27, 31, 0.75);
+  --on-surface: #fdfdfd;
+  --on-surface-variant: #938f99;
+  --brand: #6750A4;
+  --brand-bright: #d0bcff;
+  --brand-container: rgba(103, 80, 164, 0.12);
+  /* App Success Green (#4CAF50) */
+  --success: #4CAF50;
+  --success-glow: rgba(76, 175, 80, 0.25);
+  --success-alpha: rgba(76, 175, 80, 0.12);
+  /* App Warning Amber (#FFFFC107) */
+  --warning: #ffc107;
+  --warning-alpha: rgba(255, 193, 7, 0.12);
+  /* App Error Red (#ef4444) */
+  --error: #ef4444;
+  --error-alpha: rgba(239, 68, 68, 0.12);
+  --font-sans: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  background-color: var(--bg-deep);
+  color: var(--on-surface);
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+a {
+  color: var(--brand-bright);
+  text-decoration: none;
+}
+
+/* App-style Dashboard Buttons */
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  height: 64px; /* Matches app button height */
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #ffffff;
+  background: var(--brand);
+  border: none;
+  border-radius: 28px; /* M3 Large Shape */
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0, 0, 0, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-cta:hover {
+  transform: scale(1.02);
+  background: #7a63be;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.btn-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  height: 64px;
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--brand-bright);
+  background: transparent;
+  border: 1.5px solid var(--brand);
+  border-radius: 28px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-cta-secondary:hover {
+  background: rgba(103, 80, 164, 0.08);
+  transform: scale(1.01);
+}
+
+/* CORE Cockpit Card Morphology */
+.glass-card-cockpit {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(
+    180deg,
+    rgba(28, 27, 31, 0.9) 0%,
+    rgba(18, 18, 18, 0.7) 100%
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-card-cockpit::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 16px 16px;
+  pointer-events: none;
+}
+
+/* App-style Status Badges */
+.status-badge {
+  display: inline-flex;
+  padding: 5px 8px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 900;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: 1px solid currentColor;
+}
+
+.status-badge--success {
+  background: var(--success-alpha);
+  color: var(--success);
+}
+
+.status-badge--warning {
+  background: var(--warning-alpha);
+  color: var(--warning);
+}
+
+.status-badge--error {
+  background: var(--error-alpha);
+  color: var(--error);
+}
+
+.status-badge--primary {
+  background: var(--brand-container);
+  color: var(--brand-bright);
+}
+
+/* Compact Info Chips */
+.info-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 0.5px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--on-surface);
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Device Mockup Adjustments */
+.device-mockup {
+  position: relative;
+  padding: 12px;
+  border-radius: 40px;
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.9);
+}
+
+.device-mockup__screen {
+  position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+  background: #000;
+}
+
+@keyframes heart-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+.btn-support {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1rem 1.75rem;
+  border-radius: 20px;
+  background: rgba(233, 30, 99, 0.08);
+  border: 1px solid rgba(233, 30, 99, 0.2);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 12px rgba(233, 30, 99, 0.05);
+}
+
+.btn-support:hover {
+  background: rgba(233, 30, 99, 0.12);
+  border-color: rgba(233, 30, 99, 0.4);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(233, 30, 99, 0.15);
+}
+
+.btn-support:hover svg {
+  animation: heart-pulse 0.8s ease-in-out infinite;
+}

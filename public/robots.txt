@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://range-emulator.vercel.app/sitemap.xml
