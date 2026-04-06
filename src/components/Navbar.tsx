@@ -48,7 +48,6 @@ export function Navbar() {
         >
           <BrandLogo
             size="sm"
-            alt=""
             style={{ filter: "drop-shadow(0 0 10px rgba(103, 80, 164, 0.45))" }}
           />
           RangeEmulator
