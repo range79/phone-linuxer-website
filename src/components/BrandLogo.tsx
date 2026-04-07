@@ -28,7 +28,7 @@ export function BrandLogo({ size = "default", style, className }: Props) {
     >
       <img
         src="/logo.webp"
-        alt="RangeEmulator Logo"
+        alt="Range Emulator Logo"
         width={currentSize}
         height={currentSize}
         style={{

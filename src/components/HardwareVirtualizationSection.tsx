@@ -14,7 +14,7 @@ const rows = [
   },
   {
     title: "Host CPU Passthrough",
-    body: "Direct instruction-set access. Your guest OS sees the Snapdragon core, not a generic driver.",
+    body: "Direct instruction-set access. Your guest OS sees the CPU core, not a generic driver.",
     chip: "BASE-METAL",
   },
 ];
