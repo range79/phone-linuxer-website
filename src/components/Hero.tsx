@@ -64,7 +64,7 @@ export function Hero() {
               fontWeight: 500,
             }}
           >
-            Future Of Mobile Emulation
+            Any ISO. Any OS. Mobile Power.
           </p>
         </div>
       </ScrollReveal>
@@ -112,7 +112,7 @@ export function Hero() {
                 boxShadow: "0 0 8px var(--success-glow)",
               }}
             />
-            System ready — virtualization online
+            System ready — Any ISO supported
           </StatusBadge>
         </div>
       </ScrollReveal>

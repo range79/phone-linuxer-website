@@ -8,6 +8,7 @@ const techSpecs = [
   { label: "Storage", value: "NVMe / VirtIO-Block / SCSI" },
   { label: "Network", value: "User-mode SLIRP / Bridge" },
   { label: "Display Protocol", value: "SPICE (Recommended) / VNC" },
+  { label: "Image Support", value: "Any Bootable ISO (Linux, Windows, BSD)" },
   { label: "Firmware", value: "EDK2 (UEFI) Secure Boot Support" },
 ];
 
