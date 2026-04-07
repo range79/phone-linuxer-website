@@ -66,10 +66,40 @@ export function TitanModeSection() {
               
               <p style={{ color: "var(--on-surface-variant)", maxWidth: 720, lineHeight: 1.6, margin: 0 }}>
                 A custom-tuned execution path that prioritizes CPU-intensive emulation tasks.
-                By bypassing non-essential kernel interrupts, Titan Mode pushes your Snapdragon
+                By bypassing non-essential kernel interrupts, Titan Mode pushes your CPU cores
                 cores to their absolute limit.
               </p>
             </div>
+          </div>
+
+          <div 
+            className="grid-mobile-1"
+            style={{ 
+              display: "grid", 
+              gridTemplateColumns: "1fr 1fr", 
+              gap: "1.5rem", 
+              marginTop: "2.5rem",
+              padding: "20px",
+              background: "rgba(0, 0, 0, 0.3)",
+              borderRadius: "16px",
+              border: "1px solid rgba(239, 68, 68, 0.1)"
+            }}
+          >
+            {[
+              { label: "GICv3 Interrupts", detail: "Optimized direct hardware interrupt delivery path." },
+              { label: "Unsafe Cache Mode", detail: "Bypasses disk integrity sync for 0ms I/O overhead." },
+              { label: "2x TCG TB Size", detail: "Double translation buffer for max JIT efficiency." },
+              { label: "RTC Frequency Tuning", detail: "Reduced host-side kernel interrupt polling." }
+            ].map(item => (
+              <div key={item.label} style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+                <span style={{ fontSize: "0.7rem", fontFamily: "var(--font-mono)", color: "#ef4444", fontWeight: 800, textTransform: "uppercase" }}>
+                  {item.label}
+                </span>
+                <span style={{ fontSize: "0.85rem", color: "rgba(255, 255, 255, 0.7)" }}>
+                  {item.detail}
+                </span>
+              </div>
+            ))}
           </div>
 
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem", marginTop: "2rem" }}>

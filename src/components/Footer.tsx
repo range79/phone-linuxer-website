@@ -74,12 +74,20 @@ export function Footer() {
         >
           <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
             <a
+              href="https://github.com/range79/Range-Emulator-Website"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={linkBase}
+            >
+              Web-Site Source
+            </a>
+            <a
               href="https://github.com/range79/Range-Emulator"
               target="_blank"
               rel="noopener noreferrer"
               style={linkBase}
             >
-              GitHub
+              Range Emulator Source
             </a>
             <a
               href="https://t.me/range79isreal"

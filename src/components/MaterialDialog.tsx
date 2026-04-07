@@ -96,7 +96,7 @@ export function MaterialDialog({ isOpen, title, message, type = "warning", onCan
                 cursor: "pointer",
               }}
             >
-              {type === "success" ? "CONTINUE" : "OK"}
+              {type === "success" ? "CONFIRM" : "OK"}
             </button>
           </div>
         </div>
